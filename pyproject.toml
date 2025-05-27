@@ -1,0 +1,19 @@
+[project]
+name = "mcp-weather-jp"
+version = "0.1.0"
+description = "MCP server for Japanese weather forecast using JMA API"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx",
+    "fastmcp",
+]
+
+[project.scripts]
+weather-jp = "weather_JP:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
